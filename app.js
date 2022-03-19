@@ -9,9 +9,8 @@ const doctors=require("./model/doctors");
 const blog=require("./model/blog");
 const appointments=require("./model/appointments");
 const PORT=process.env.PORT||3000;
+
 const admingetdoctors=require("./routes/admingetdoctors");
-
-
 const admingetsingledoctor=require("./routes/admingetsingledoctor");
 const admingetsingleuser=require("./routes/admingetsingleuser");
 const admingetusers=require("./routes/admingetusers");
@@ -22,11 +21,9 @@ const botchat=require("./routes/botchat");
 const doctorsignin=require("./routes/doctorsignin");
 const doctorsignup=require("./routes/doctorsignup");
 const music=require("./routes/music");
-
 const userproblemform=require("./routes/userproblemform");
 const userproblemresponse=require("./routes/userproblemresponse");
 const userprofileget=require("./routes/userprofileget");
-
 const userprofileupdate=require("./routes/userprofileupdate");
 const usersignin=require("./routes/usersignin");
 const usersignup=require("./routes/usersignup");
@@ -45,7 +42,6 @@ app.use("/music",music);
 app.use("/userproblemform",userproblemform);
 app.use("/userproblemresponse",userproblemresponse);
 app.use("/userprofileget",userprofileget);
-
 app.use("/userprofileupdate",userprofileupdate);
 app.use("/usersignin",usersignin);
 app.use("/usersignup",usersignup);
