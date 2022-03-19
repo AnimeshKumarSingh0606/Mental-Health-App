@@ -23,9 +23,9 @@ const admingetdoctors=require("./routes/admingetdoctors");
 // const userproblemform=require("./routes/userproblemform");
 // const userproblemresponse=require("./routes/userproblemresponse");
 // const userprofileget=require("./routes/userprofileget");
-// const userprofileupdate=require("./routes/userprofileupdate");
-// const usersignin=require("./routes/usersignin");
-// const usersignup=require("./routes/usersignup");
+const userprofileupdate=require("./routes/userprofileupdate");
+const usersignin=require("./routes/usersignin");
+const usersignup=require("./routes/usersignup");
 
 app.use("/admingetdoctors/",admingetdoctors);
 // app.use("/admingetsingledoctor",admingetsingledoctor);
@@ -41,9 +41,9 @@ app.use("/admingetdoctors/",admingetdoctors);
 // app.use("/userproblemform",userproblemform);
 // app.use("/userproblemresponse",userproblemresponse);
 // app.use("/userprofileget",userprofileget);
-// app.use("/userprofileupdate",userprofileupdate);
-// app.use("/usersignin",usersignin);
-// app.use("/usersignup",usersignup);
+app.use("/userprofileupdate",userprofileupdate);
+app.use("/usersignin",usersignin);
+app.use("/usersignup",usersignup);
 
 try {
     mongoose
