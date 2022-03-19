@@ -18,8 +18,10 @@ const admingetdoctors = async (req, res, next) => {
     return res.json({"admingetusers":"admingetusers"});
   };
 
+
   
 module.exports.admingetdoctors = admingetdoctors;
 module.exports.admingetsingledoctor = admingetsingledoctor;
 module.exports.admingetsingleuser = admingetsingleuser;
 module.exports.admingetusers = admingetusers;
+
