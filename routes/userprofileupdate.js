@@ -1,9 +1,14 @@
 const express = require("express");
 const Router = express.Router();
 const usercontroller = require("../controllers/usercontroller");
+const auth= require("./../middlewares/auth");
+const authenticationfirst=require("./../middlewares/authenticationfirst");
 
 const { body } = require("express-validator");
 
-Router.get("/",usercontroller.userprofileupdate);
+Router.use(auth);
+Router.use(authenticationfirst);
+
+Router.post("/",usercontroller.userprofileupdate);
 
 module.exports = Router;

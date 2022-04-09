@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 const { stringify } = require("querystring");
 
-const userModel=new mongoose.Schema({
+const adminModel=new mongoose.Schema({
     name:{
         type:String,
         maxlength:30,
@@ -9,13 +9,13 @@ const userModel=new mongoose.Schema({
     },
     role:{
         type:String,
-        default:"user"
+        default:"admin"
     },
     email:{
         type:String,
         required:true
     },
-    country:{
+    country:{ 
         type:String,
         required:true
     },
@@ -47,7 +47,7 @@ const userModel=new mongoose.Schema({
 });
 
 
-const user = new mongoose.model('usermodel',userModel);
+const admin = new mongoose.model('adminmodel',adminModel);
 
 
-module.exports = user;
+module.exports = admin;

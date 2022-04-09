@@ -4,8 +4,12 @@ const { stringify } = require("querystring");
 const doctorModel=new mongoose.Schema({
     name:{
         type:String,
-        maxlength:2,
+        minlength:2,
         required:true
+    },
+    role:{
+        type:String,
+        default:"doctor"
     },
     email:{
         type:String,
@@ -30,8 +34,7 @@ const doctorModel=new mongoose.Schema({
     password:{
         type:String,
         required:true,
-        minlength:8,
-        select: false
+        minlength:8
     },
     profile_picture:{
         type:String,
@@ -39,7 +42,7 @@ const doctorModel=new mongoose.Schema({
     },
     gender:{
         type:String,
-        required:true
+        required:true 
     },
     doctor_License_Number:{
         type:String,

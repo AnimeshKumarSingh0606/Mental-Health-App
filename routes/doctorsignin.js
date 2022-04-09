@@ -1,10 +1,11 @@
 const express = require("express");
-const { doctorsignin } = require("../controllers/doctorsCotroller");
+const doctorsController = require("../controllers/doctorsController");
+const Router = express.Router();
 
-const router = express.Router();
+const { body } = require("express-validator");
 
-router.route("/").get(doctorsignin);
+Router.post("/",doctorsController.doctorsignin);
 
-module.exports = router;
+module.exports = Router;
 
 

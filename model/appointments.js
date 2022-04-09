@@ -6,45 +6,23 @@ const appointmentModel=new mongoose.Schema({
         type:String,
         required:true
     },
-    username:{
+    doctorid:{
         type:String,
         required:true
     },
-    doctorname:{
+    status:{
         type:String,
-        maxlength:2,
-        required:true
+        default:"NA"
     },
-    doctor_License_Number:{
-        type:String,
-        required:true
-    },
-    useremail:{
+    userrequest:{
         type:String,
         required:true
     },
-    doctoremail:{
-        type:String,
-        required:true
-    },
-    user_profile_picture:{
+    doctorresponse:{
         type:String,
         default:""
     },
-    doctor_profile_picture:{
-        type:String,
-        required:true
-    },
-    query_heading:{
-        type:String,
-        required:true,
-        minlength:5
-    },
-    query_content:{
-        type:String,
-        required:true,
-        minlength:30
-    }
+    
 });
 
 

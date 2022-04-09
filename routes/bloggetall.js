@@ -1,9 +1,14 @@
 const express = require("express");
-const {blogGetDetails}  = require("../controllers/blogController");
-const router = express.Router();
+const Router = express.Router();
+const { blogGetAll }  = require("../controllers/blogController");
+const auth= require("./../middlewares/auth");
+const authenticationfirst=require("./../middlewares/authenticationfirst");
 
+const { body } = require("express-validator");
 
-router.route("/").get(blogGetDetails);
+Router.use(auth);
+Router.use(authenticationfirst);
 
-module.exports = router;
+Router.get("/",blogGetAll);
 
+module.exports = Router;

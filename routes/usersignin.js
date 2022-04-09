@@ -4,6 +4,6 @@ const usercontroller = require("../controllers/usercontroller");
 
 const { body } = require("express-validator");
 
-Router.get("/",usercontroller.usersignin);
+Router.post("/",usercontroller.usersignin);
 
 module.exports = Router;

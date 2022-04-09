@@ -9,6 +9,6 @@ const { body } = require("express-validator");
 Router.use(adminauth);
 Router.use(adminauthenticationfirst);
 
-Router.get("/",admincontroller.admingetsingledoctor);
+Router.post("/",admincontroller.adminapproveadoctor);
 
 module.exports = Router;

@@ -1,9 +1,9 @@
 const express = require("express");
 const Router = express.Router();
-const usercontroller = require("../controllers/usercontroller");
+const admincontroller = require("../controllers/admincontroller");
 
 const { body } = require("express-validator");
 
-Router.post("/",usercontroller.usersignup);
+Router.post("/",admincontroller.adminsignin);
 
 module.exports = Router;

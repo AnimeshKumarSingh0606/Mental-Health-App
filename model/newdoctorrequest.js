@@ -1,15 +1,15 @@
 const mongoose=require("mongoose");
 const { stringify } = require("querystring");
 
-const userModel=new mongoose.Schema({
+const newdoctorregistration=new mongoose.Schema({
     name:{
         type:String,
-        maxlength:30,
+        minlength:2,
         required:true
     },
     role:{
         type:String,
-        default:"user"
+        default:"doctor"
     },
     email:{
         type:String,
@@ -29,25 +29,30 @@ const userModel=new mongoose.Schema({
     },
     phone:{
         type:Number,
-        required:true 
+        required:true
     },
     password:{
         type:String,
         required:true,
-        minlength:8, 
+        minlength:8
     },
     profile_picture:{
         type:String,
-        default:""
+        required:true
     },
     gender:{
         type:String,
         required:true
-    }
-});
+    },
+    doctor_License_Number:{
+        type:String,
+        required:true
+    },
+ 
+}); 
 
 
-const user = new mongoose.model('usermodel',userModel);
+const doctorregistration = new mongoose.model('newdoctorregistration',newdoctorregistration);
 
 
-module.exports = user;
+module.exports = doctorregistration;
